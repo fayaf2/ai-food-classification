@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Detection App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #202124;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        #camera {
+            width: 640px;
+            height: 480px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            background-color: #000;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .controls button {
+            background-color: #3c4043;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: #5f6368;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Detection App</h1>
+    <video id="camera" autoplay></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <div class="controls">
+        <button onclick="capture()">🍽️ Capture Food</button>
+        <button id="switchBtn">🔄 Switch Camera</button>
+    </div>
+
+    <p id="result"></p>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
